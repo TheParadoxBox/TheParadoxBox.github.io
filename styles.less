@@ -1,0 +1,173 @@
+// Fira fonts
+
+@font-face
+{
+	font-family: 'Fira Sans';
+	src: url(./fonts/FiraSans-Regular.ttf);
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family: 'Fira Sans';
+	src: url(./fonts/FiraSans-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face
+{
+	font-family: 'Fira Sans';
+	src: url(./fonts/FiraSans-Italic.ttf);
+	font-style: italic;
+}
+
+@font-face
+{
+	font-family: 'Fira Sans';
+	src: url(./fonts/FiraSans-BoldItalic.ttf);
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face
+{
+	font-family: 'Fira Code';
+	src: url(./fonts/FiraCode-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family: 'Fira Code';
+	src: url(./fonts/FiraCode-Bold.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+// End Fira fonts
+
+
+
+@gruvbox-bg-dark: #1d2021;
+@gruvbox-bg-medium: #282828;
+@gruvbox-bg-light: #504945;
+
+@gruvbox-fg-light: #ebdbb2;
+@gruvbox-fg-dark: #a89984;
+
+@gruvbox-high-light: #fe8019;
+@gruvbox-high-dark: #d65d0e;
+
+p, ul, ol, dl, dt, dd, li {
+	font-size: 13pt;
+}
+
+body {
+	background-color: @gruvbox-bg-light;
+	color: @gruvbox-fg-light;
+	min-width: 65%;
+	max-width: 1248px;
+	margin: 0 auto;
+	font-family: "Fira Sans", "Trebuchet MS", "Tahoma", "Verdana", "Arial", sans-serif;
+}
+
+.boxMixin() {
+	background-color: @gruvbox-bg-medium;
+	border: 3px solid @gruvbox-fg-dark;
+	border-radius: 4px;
+	padding: 8px;
+	margin: 2px;
+}
+
+.topbar-footer {
+	text-align: center;
+	.boxMixin();
+	background-color: @gruvbox-bg-dark;
+}
+
+.title {
+	font-size: 64px;
+	color: @gruvbox-high-dark;
+}
+
+.subtitle {
+	color: @gruvbox-high-light;
+}
+
+.highlight {
+	background-color: @gruvbox-high-light;
+	color: @gruvbox-bg-dark;
+	padding: 2px 8px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.content {
+	display: flex;
+}
+
+.sidebar {
+	.boxMixin();
+	width: 300px;
+	float: left;
+}
+
+.mainContentContainer {
+	width: 100%;
+	display: table;
+}
+
+.mainContent {
+	.boxMixin();
+	height: 100%;
+}
+
+.codeBox {
+	.boxMixin();
+	background-color: @gruvbox-bg-light;
+	font-size: 12pt;
+	font-family: "Fira Code", monospace;
+}
+
+a {
+	color: @gruvbox-high-light;
+	&:visited {
+		color: @gruvbox-high-dark;
+	}
+}
+
+.sidebar a {
+	font-size: 20px;
+	margin-left: 18px;
+	text-decoration: none;
+	color: @gruvbox-high-dark;
+	&:hover {
+		color: @gruvbox-high-light;
+	}
+}
+
+a.highlight {
+	color: @gruvbox-bg-dark;
+	text-decoration: none;
+	&:hover {
+		color: @gruvbox-bg-dark;
+	}
+	&:visited {
+		color: @gruvbox-bg-dark;
+	}
+}
+
+.sidebar a.highlight {
+	margin-left: 10px;
+}
+
+// Mobile-first web design? Hardly know 'er.
+@media only screen and (max-width: 1000px) {
+	body {width: unset;}
+	.content {display: unset;}
+	.sidebar {float: unset; width: unset; margin-right: unset;}
+	.sidebar br {display: none;}
+	.inactivepage {margin-left: unset;}
+	h1, h2, h3, h4, h5, h6 {text-align: center;}
+	.maincontent {width: unset;}
+}
