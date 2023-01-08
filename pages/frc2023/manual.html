@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Paradox Online Pages
+		</title>
+		<link rel="stylesheet" href="../pages-styles.css" />		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="The home of TheParadoxBox on the Internet." />
+		<meta name="keywords" content="theparadoxbox, paradox, paradoxbox, box, blog" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../icon_32.png" />
+	</head>
+	<body>
+		<h1 class="title">
+			Manual Notes
+		</h1>
+		<!-- Copied and pasted from my Joplin notebook. Formatting is inconsistent with the rest of the site, but that's okay because this is HTML, not Python. -->
+
+		<p>This is a recap of fundamental game info in the manual. It assumes a basic knowledge of central FRC concepts. These include but are not limited to:</p>
+		<ul>
+		<li>Autonomous, Teleoperated, and Endgame phases</li>
+		<li>Alliances, Alliance Areas, and the Starting Line</li>
+		<li>Fouls, tech fouls, and yellow and red cards</li>
+		</ul>
+		<p>If you are not familiar with these concepts, please instead read the manual or ask a team mentor.</p>
+		<p><a href='http://firstfrc.blob.core.windows.net/frc2023/Manual/2023FRCGameManual.pdf'>Manual link</a><br>
+		<a href='https://www.twitch.tv/videos/1700452001'>Livestream Link</a></p>
+		<h1>Field Layout</h1>
+		<img src="./_resources/5c49848f1c4b4492a9ff1ad55cc743b9.png" width="780" height="428"/>
+		<p>All labels are explained in the following section.</p>
+		<h1 id="game-objects-and-concepts">Game Objects and Concepts</h1>
+		<h2 id="game-piece">Game Piece</h2>
+		<p><img src="./_resources/f566ae7e2249483992a22385b39e408c.png" width="265" height="285"/><img src="./_resources/827ca7f123304c139d79597dad66c7d5.png" width="377" height="285"/></p>
+		<p>A purple inflatable cube or a yellow traffic cone.</p>
+		<ul>
+		<li>54 cones, 44 cubes (27/22 for each team) in total</li>
+		<li>One cone or cube can be preloaded into a robot</li>
+		<li>Only one Game Piece can be carried at a time</li>
+		<li>Most pieces are in human player station (see Staging Mark and Substation)</li>
+		<li>Game Pieces are to be placed in one of two spots on the Grid</li>
+		<li>Cubes can be inflated to proper spec with the jig included in the kit of parts</li>
+		<li>Don't grab Game Piece cubes too hard! Popping a cube during a match is a tech foul</li>
+		</ul>
+		<h2>Staging Mark</h2>
+		<img src="./_resources/90b163f8154c42c1939c92a5d8a6ef4e.png" width="372" height="295"/>
+		<p>A field mark where Game Pieces are set before the game</p>
+		<ul>
+		<li>Four on each side</li>
+		<li>Teams may decide which marks get cubes and cones
+		<ul>
+		<li>If no decision, cubes are outer two, cones are inner two</li>
+		</ul>
+		</li>
+		</ul>
+		<h2>Center Line</h2>
+		<img src="./_resources/fa8fbe6320464c28a8ce344e367266ef.png" width="126" height="403"/>
+		<p>A field mark that bisects the field.</p>
+		<ul>
+		<li>Robots cannot go on the other team's side during Autonomous</li>
+		</ul>
+		<h2>Charge Station</h2>
+		<img src="./_resources/cb3017a4159f4fffb03b41665c932977.png" width="500" height="321"/>
+		<p><a href='https://www.youtube.com/watch?v=ITn8g_zGA-8&amp;list=PLZT9pIgNOV6ZxDnkFOrJvNdYcpn4KcWRV&amp;index=4'>Field Tour Video</a></p>
+		<p>A balancing platform that is used twice in a match. More info in the &quot;Game Procedure&quot; section.</p>
+		<ul>
+		<li>See-saw action when robots drive on ramps
+		<ul>
+		<li>Degrees when the platform is tilted:
+		<ul>
+		<li>On-ramp: 11 degrees</li>
+		<li>Platform: 15 degrees</li>
+		<li>&quot;Disabled&quot; ramp: 71.5 degrees</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+		<li>Lights up when level (red marks in picture)</li>
+		<li>Level = 2.5 degrees of actually being level</li>
+		<li>Game Pieces are designed to not impede Charge Station function</li>
+		</ul>
+		<h3>Docked robot</h3>
+		<p>A robot that is only contacting the Charge Station and/or other objects fully supported by the Charge Station.</p>
+		<h3>Engaged robot</h3>
+		<p>A robot that is docked while:</p>
+		<ul>
+		<li>All other robots touching the Charge Station are also docked</li>
+		<li>The Charge Station is level</li>
+		</ul>
+		<p>The two terms above are relevant in the &quot;Game Procedure&quot; section.</p>
+		<h2>Grid</h2>
+		<img src="./_resources/6d92a0c675e144df8b8b6cb2fe7909c2.png" width="495" height="290"/>
+		<p><a href='https://www.youtube.com/watch?v=J70qFwiUek0&amp;list=PLZT9pIgNOV6ZxDnkFOrJvNdYcpn4KcWRV&amp;index=3'>Field Tour Video</a></p>
+		<p>A scoring area.</p>
+		<ul>
+		<li>Both sides have three Grids
+		<ul>
+		<li>Outer two are team Grids, inner Grid is the Co-op Grid (relevant for scoring)</li>
+		</ul>
+		</li>
+		<li>Each grid contains nine nodes (explained below) to score on</li>
+		</ul>
+		<h3>Node</h3>
+		<img src="./_resources/07cfd2ecb2f243618d59f5de2335824a.png" width="471" height="308"/>
+		<p>A scoring rod or platform on the Grid.</p>
+		<ul>
+		<li>Three types: cube (platform), cone (rod), hybrid (floor)</li>
+		<li>Each Grid contains nine Nodes: two levels of cone-cube-cone Nodes (high, middle) and one level of three hybrid Nodes (low)</li>
+		<li>Placing a cube on a platform, hooking a cone on a rod, or placing either on a hybrid Node earns your alliance points</li>
+		</ul>
+		<h3>Link</h3>
+		<img src="./_resources/8e6ae375e9fe484ba90daf29dcd1b89b.png" width="507" height="156"/>
+		<p>Three filled Nodes in a row.</p>
+		<ul>
+		<li>Awards extra points</li>
+		<li>Four in a row is not two Links</li>
+		</ul>
+		<h2>Community</h2>
+		<img src="./_resources/07543c623c704d289250905af8debea1.png" width="310" height="316"/>
+		<p>A &quot;safe zone&quot; of sorts for each team.</p>
+		<ul>
+		<li>Contains Grid, Charge Station, and four Staging Marks with Game Pieces</li>
+		<li>Robots can start anywhere in their Community except the Charging Station</li>
+		<li>Teams are given a foul if their robot touches an opposing robot in its Community</li>
+		</ul>
+		<h2 id="substation">Substation</h2>
+		<img src="./_resources/a52f52cdf1a9415e85229e51801ab2fb.png" width="633" height="485"/>
+		<p><a href='https://www.youtube.com/watch?v=N6GRrG8yttU&amp;list=PLZT9pIgNOV6ZxDnkFOrJvNdYcpn4KcWRV&amp;index=2'>Field Tour Video</a></p>
+		<p>The area where human players give Game Pieces beyond the four on the Staging Marks to robots. <strong>May seem familiar if you played Rapid React.</strong></p>
+		<ul>
+		<li>Max of three human players</li>
+		<li>Either a <strong>Single Substation</strong> or a <strong>Double Substation</strong></li>
+		<li>Single Substation is a single chute</li>
+		<li>Double Substations contain moving shelves and a drop onto a slope
+		<ul>
+		<li>Game Pieces can be grabbed from a shelf or from the floor</li>
+		</ul>
+		</li>
+		<li>Each Substation contains a <strong>Portal</strong> where human players insert Game Pieces</li>
+		</ul>
+		<h2>Loading Zone</h2>
+		<img src="./_resources/c7e534592e034a0a8d8a45814a04098d.png" width="330" height="122"/>
+		<p>The area where robots go to receive Game Pieces from human players.</p>
+		<ul>
+		<li>Contains one Double Substation and one Single Substation</li>
+		<li>An alliance's Loading Zone is on the opposite side of their Alliance Area</li>
+		<li>Teams are given a foul if their robot touches an opposing robot in its Loading Zone</li>
+		<li>Technicians: do not trip on the barrier that separates the Community and Loading Zone</li>
+		</ul>
+		<br/>
+		<h4>Other videos on the FRC 2023 playlist:</h4>
+		<p><a href='https://www.youtube.com/watch?v=puocmPqAdLw&amp;list=PLZT9pIgNOV6ZxDnkFOrJvNdYcpn4KcWRV&amp;index=1'>Alliance Area</a></p>
+		<p><a href='https://www.youtube.com/watch?v=55_o88WUCS8&amp;list=PLZT9pIgNOV6ZxDnkFOrJvNdYcpn4KcWRV&amp;index=5'>Cube Measuring Jig</a> (For proper inflation of Game Piece cubes)</p>
+		<h1>Game Procedure</h1>
+		<h2>Autonomous (Auto)</h2>
+		<ul>
+		<li>Start in chosen location in Community</li>
+		<li>Leave Community</li>
+		<li>Receive points and score extra points</li>
+		<li>Dock and/or engage with Charge Station</li>
+		</ul>
+		<h2">Teleoperated (Teleop)</h2>
+		<ul>
+		<li>Receive Game Pieces and score points
+		<ul>
+		<li>If a piece scored in Auto is removed, its points are removed. If it is put back, the Auto points are given back</li>
+		</ul>
+		</li>
+		</ul>
+		<h2>Endgame</h2>
+		<ul>
+		<li>Dock and/or engage with Charge Station</li>
+		</ul>
+
+
+
+		<hr>
+		<p>
+			<a href="../pages-index.html">Back to Pages Home</a>
+		</p>
+	</body>
+</html>
