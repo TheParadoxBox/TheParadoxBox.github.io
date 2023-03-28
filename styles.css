@@ -134,6 +134,25 @@ a.highlight:visited {
 .sidebar a.highlight {
   margin-left: 10px;
 }
+.social-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.social {
+  background-color: #504945;
+  flex-grow: 1;
+  text-align: center;
+  padding: 20px;
+  font-size: 18pt;
+  border-radius: 10px;
+  color: #1d2021;
+  text-decoration: none;
+  font-weight: bold;
+}
+.social:visited {
+  color: #1d2021;
+}
 @media only screen and (max-width: 1000px) {
   body {
     width: unset;

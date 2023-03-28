@@ -162,6 +162,27 @@ a.highlight {
 	margin-left: 10px;
 }
 
+.social-container {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.social {
+	background-color: @gruvbox-bg-light;
+	flex-grow: 1;
+	text-align: center;
+	padding: 20px;
+	font-size: 18pt;
+	border-radius: 10px;
+	color: @gruvbox-bg-dark;
+	&:visited {
+		color: @gruvbox-bg-dark;
+	}
+	text-decoration: none;
+	font-weight: bold;
+}
+
 // Mobile-first web design? Hardly know 'er.
 @media only screen and (max-width: 1000px) {
 	body {width: unset;}
