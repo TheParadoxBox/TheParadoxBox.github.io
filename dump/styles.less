@@ -48,15 +48,15 @@
 
 
 
-@gruvbox-bg-dark: #ffffee;
-@gruvbox-bg-medium: #ffffee;
-@gruvbox-bg-light: #eeeedd;
+@gruvbox-bg-dark: #000000;
+@gruvbox-bg-medium: #000000;
+@gruvbox-bg-light: #000000;
 
-@gruvbox-fg-light: #333322;
-@gruvbox-fg-dark: #333322;
+@gruvbox-fg-light: #ffffff;
+@gruvbox-fg-dark: #ffffff;
 
-@gruvbox-high-light: #333322;
-@gruvbox-high-dark: #333322;
+@gruvbox-high-light: #ffffff;
+@gruvbox-high-dark: #ffffff;
 
 p, ul, ol, dl, dt, dd, li {
 	font-size: 13pt;
@@ -73,10 +73,10 @@ body {
 
 .boxMixin() {
 	background-color: @gruvbox-bg-medium;
-	border: 3px solid @gruvbox-fg-dark;
+	// border: 3px solid @gruvbox-fg-dark;
 	// border-radius: 4px;
-	padding: 8px;
-	margin: -2px;
+	// padding: 8px;
+	// margin: -2px;
 }
 
 .topbar-footer {
@@ -105,17 +105,18 @@ body {
 
 .content {
 	display: flex;
+	flex-direction: row;
 }
 
 .sidebar {
 	.boxMixin();
 	width: 300px;
-	float: left;
 }
 
 .mainContentContainer {
 	width: 100%;
-	display: table;
+	display: flex;
+	flex-direction: column;
 }
 
 .mainContent {
@@ -166,8 +167,9 @@ a.highlight {
 @media only screen and (max-width: 1000px) {
 	body {width: unset;}
 	.content {display: unset;}
-	.sidebar {float: unset; width: unset; margin-right: unset;}
+	.sidebar {width: unset; margin-right: unset;}
 	.sidebar br {display: none;}
+	.sidebar a {margin-left: unset;}
 	.inactivepage {margin-left: unset;}
 	h1, h2, h3, h4, h5, h6 {text-align: center;}
 	.maincontent {width: unset;}

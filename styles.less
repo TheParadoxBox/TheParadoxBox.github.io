@@ -104,17 +104,18 @@ body {
 
 .content {
 	display: flex;
+	flex-direction: row;
 }
 
 .sidebar {
 	.boxMixin();
 	width: 300px;
-	float: left;
 }
 
 .mainContentContainer {
 	width: 100%;
-	display: table;
+	display: flex;
+	flex-direction: column;
 }
 
 .mainContent {
@@ -165,8 +166,9 @@ a.highlight {
 @media only screen and (max-width: 1000px) {
 	body {width: unset;}
 	.content {display: unset;}
-	.sidebar {float: unset; width: unset; margin-right: unset;}
+	.sidebar {width: unset; margin-right: unset;}
 	.sidebar br {display: none;}
+	.sidebar a {margin-left: unset;}
 	.inactivepage {margin-left: unset;}
 	h1, h2, h3, h4, h5, h6 {text-align: center;}
 	.maincontent {width: unset;}
