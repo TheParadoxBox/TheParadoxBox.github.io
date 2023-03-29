@@ -73,7 +73,8 @@ body {
 }
 .sidebar {
   background-color: #000000;
-  width: 300px;
+  flex-shrink: 0;
+  margin-right: 25px;
 }
 .mainContentContainer {
   width: 100%;
