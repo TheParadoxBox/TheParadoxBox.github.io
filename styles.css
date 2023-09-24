@@ -183,4 +183,7 @@ a.highlight:visited {
   .maincontent {
     width: unset;
   }
+  .social-container {
+    flex-wrap: wrap;
+  }
 }
