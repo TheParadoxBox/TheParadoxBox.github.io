@@ -104,17 +104,17 @@ body {
 
 .content {
 	display: flex;
+	flex-direction: row;
 }
 
 .sidebar {
 	.boxMixin();
-	width: 300px;
-	float: left;
 }
 
 .mainContentContainer {
 	width: 100%;
-	display: table;
+	display: flex;
+	flex-direction: column;
 }
 
 .mainContent {
@@ -161,13 +161,36 @@ a.highlight {
 	margin-left: 10px;
 }
 
+.social-container {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.social {
+	background-color: @gruvbox-bg-light;
+	flex-grow: 1;
+	text-align: center;
+	padding: 20px;
+	font-size: 18pt;
+	border-radius: 10px;
+	color: @gruvbox-bg-dark;
+	&:visited {
+		color: @gruvbox-bg-dark;
+	}
+	text-decoration: none;
+	font-weight: bold;
+}
+
 // Mobile-first web design? Hardly know 'er.
 @media only screen and (max-width: 1000px) {
 	body {width: unset;}
 	.content {display: unset;}
-	.sidebar {float: unset; width: unset; margin-right: unset;}
+	.sidebar {width: unset; margin-right: unset;}
 	.sidebar br {display: none;}
+	.sidebar a {margin-left: unset;}
 	.inactivepage {margin-left: unset;}
 	h1, h2, h3, h4, h5, h6 {text-align: center;}
 	.maincontent {width: unset;}
+	.social-container {flex-wrap: wrap;}
 }

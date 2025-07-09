@@ -41,8 +41,8 @@ li {
   font-size: 13pt;
 }
 body {
-  background-color: #eeeedd;
-  color: #333322;
+  background-color: #000000;
+  color: #ffffff;
   min-width: 65%;
   max-width: 1248px;
   margin: 0 auto;
@@ -50,81 +50,70 @@ body {
 }
 .topbar-footer {
   text-align: center;
-  border: 3px solid #333322;
-  padding: 8px;
-  margin: -2px;
-  background-color: #ffffee;
+  background-color: #000000;
 }
 .title {
   font-size: 36px;
-  color: #333322;
+  color: #ffffff;
 }
 .subtitle {
   font-size: 24px;
-  color: #333322;
+  color: #ffffff;
 }
 .highlight {
-  background-color: #333322;
-  color: #ffffee;
+  background-color: #ffffff;
+  color: #000000;
   padding: 2px 8px;
   border-radius: 4px;
   font-weight: bold;
 }
 .content {
   display: flex;
+  flex-direction: row;
 }
 .sidebar {
-  background-color: #ffffee;
-  border: 3px solid #333322;
-  padding: 8px;
-  margin: -2px;
-  width: 300px;
-  float: left;
+  background-color: #000000;
+  flex-shrink: 0;
+  margin-right: 25px;
 }
 .mainContentContainer {
   width: 100%;
-  display: table;
+  display: flex;
+  flex-direction: column;
 }
 .mainContent {
-  background-color: #ffffee;
-  border: 3px solid #333322;
-  padding: 8px;
-  margin: -2px;
+  background-color: #000000;
   height: 100%;
 }
 .codeBox {
-  background-color: #ffffee;
-  border: 3px solid #333322;
-  padding: 8px;
-  margin: -2px;
-  background-color: #eeeedd;
+  background-color: #000000;
   font-size: 12pt;
   font-family: "Fira Code", monospace;
 }
 a {
-  color: #333322;
+  color: #ffffff;
 }
 a:visited {
-  color: #333322;
+  color: #ffffff;
 }
 .sidebar a {
   font-size: 20px;
   margin-left: 18px;
   text-decoration: none;
-  color: #333322;
+  color: #ffffff;
 }
 .sidebar a:hover {
-  color: #333322;
+  color: #ffffff;
 }
 a.highlight {
-  color: #ffffee;
+  color: #000000;
   text-decoration: none;
 }
 a.highlight:hover {
-  color: #ffffee;
+  color: #000000;
 }
 a.highlight:visited {
-  color: #ffffee;
+  color: #000000;
 }
 .sidebar a.highlight {
   margin-left: 10px;
@@ -137,12 +126,14 @@ a.highlight:visited {
     display: unset;
   }
   .sidebar {
-    float: unset;
     width: unset;
     margin-right: unset;
   }
   .sidebar br {
     display: none;
+  }
+  .sidebar a {
+    margin-left: unset;
   }
   .inactivepage {
     margin-left: unset;

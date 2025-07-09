@@ -73,6 +73,7 @@ body {
 }
 .content {
   display: flex;
+  flex-direction: row;
 }
 .sidebar {
   background-color: #282828;
@@ -80,12 +81,11 @@ body {
   border-radius: 4px;
   padding: 8px;
   margin: 2px;
-  width: 300px;
-  float: left;
 }
 .mainContentContainer {
   width: 100%;
-  display: table;
+  display: flex;
+  flex-direction: column;
 }
 .mainContent {
   background-color: #282828;
@@ -133,6 +133,25 @@ a.highlight:visited {
 .sidebar a.highlight {
   margin-left: 10px;
 }
+.social-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.social {
+  background-color: #504945;
+  flex-grow: 1;
+  text-align: center;
+  padding: 20px;
+  font-size: 18pt;
+  border-radius: 10px;
+  color: #1d2021;
+  text-decoration: none;
+  font-weight: bold;
+}
+.social:visited {
+  color: #1d2021;
+}
 @media only screen and (max-width: 1000px) {
   body {
     width: unset;
@@ -141,12 +160,14 @@ a.highlight:visited {
     display: unset;
   }
   .sidebar {
-    float: unset;
     width: unset;
     margin-right: unset;
   }
   .sidebar br {
     display: none;
+  }
+  .sidebar a {
+    margin-left: unset;
   }
   .inactivepage {
     margin-left: unset;
@@ -161,5 +182,8 @@ a.highlight:visited {
   }
   .maincontent {
     width: unset;
+  }
+  .social-container {
+    flex-wrap: wrap;
   }
 }
